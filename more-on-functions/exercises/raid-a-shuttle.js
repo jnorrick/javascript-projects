@@ -19,12 +19,12 @@ function holdStatus(arr){
 }
 
 let normalFunction = function(n) {
-  if (checkFuel === 'green') {
+  if (checkFuel == 'green') {
     return n - 100001; 
-  } else if (checkFuel === 'yellow') {
-    return n - 50001;
+  } else if (checkFuel == 'yellow') {
+      return n - 50001;
   } else {
-    return n;
+      return n;
   }
 
 }
@@ -34,7 +34,8 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
-console.log(normalFunction(checkFuel(fuelLevel)));
+console.log(normalFunction(fuelLevel));
+
 // Steal some fuel from the shuttle:
 
 
@@ -45,6 +46,10 @@ console.log(normalFunction(checkFuel(fuelLevel)));
 //c). Once you figure out how much fuel to pump out, return that value.
 
 //d). Decide where to best place your function call to gather our new fuel.
+
+
+
+
 
 // Next, liberate some of that glorious cargo.
 

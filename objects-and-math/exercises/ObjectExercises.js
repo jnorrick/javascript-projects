@@ -89,14 +89,10 @@ let resultString = ""
 let acumulator = 0
 let numOfMoves = 0
 while (acumulator <= 19) {
-   // console.log(`before acumulator: ${acumulator}` )
-   // console.log(`before NUMBER OF MOVES: ${numOfMoves}` )
    acumulator += chimpanzeeTwo.move();
    numOfMoves += 1
-   // console.log(`after acumulator: ${acumulator}` )
-   // console.log(`after NUMBER OF MOVES: ${numOfMoves}` )
-   // resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
-   // console.log(resultString)
+   resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
+   console.log(resultString)
    }
    resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
    console.log(resultString)

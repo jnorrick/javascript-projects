@@ -60,40 +60,56 @@ function crewReports(array) {
 }
 // crewReports(crew);
 
-function crewReportsActual(object) {
-   console.log(`${object.name} is a ${object.species}. They are ${object.age} years old and ${object.mass} kilograms. Their ID is ${object.astronautID}.`);
-}
-
-// crewReportsActual(dog);
-
-// for (item in crew){
-//    crewReportsActual(crew[item]);
+// function crewReportsActual(object) {
+//    console.log(`${object.name} is a ${object.species}. They are ${object.age} years old and ${object.mass} kilograms. Their ID is ${object.astronautID}.`);
 // }
-// Before these animal astronauts can get ready for launch, they need to take a physical fitness test. Define a fitnessTest function that takes an array as a parameter.
 
-// Within the function, race the five animals together by using the move method. An animal is done with the race when they reach 20 steps or greater. Store the result as a string: '____ took ____ turns to take 20 steps.' Fill in the blanks with the animal’s name and race result. Create a new array to store how many turns it takes each animal to complete the race.
+// // crewReportsActual(dog);
 
-// Return the array from the function, then print the results to the console (one animal per line).
+// // for (item in crew){
+// //    crewReportsActual(crew[item]);
+// // }
+// // Before these animal astronauts can get ready for launch, they need to take a physical fitness test. Define a fitnessTest function that takes an array as a parameter.
 
-// HINT: There are a lot of different ways to approach this problem. One way that works well is to see how many iterations of the move method it will take for each animal to reach 20 steps.
-// Print out the relevant information about each animal.
+// // Within the function, race the five animals together by using the move method. An animal is done with the race when they reach 20 steps or greater. Store the result as a string: '____ took ____ turns to take 20 steps.' Fill in the blanks with the animal’s name and race result. Create a new array to store how many turns it takes each animal to complete the race.
 
-// Start an animal race!
-// function fitnessTest(array) {
-//    acumulator = 0
-//    while (acumulator <= 20) {
+// // Return the array from the function, then print the results to the console (one animal per line).
 
-//   }
-//}
-let resultString = ""
-let acumulator = 0
-let numOfMoves = 0
-while (acumulator <= 19) {
-   acumulator += chimpanzeeTwo.move();
-   numOfMoves += 1
-   resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
-   console.log(resultString)
+// // HINT: There are a lot of different ways to approach this problem. One way that works well is to see how many iterations of the move method it will take for each animal to reach 20 steps.
+// // Print out the relevant information about each animal.
+
+// // Start an animal race!
+// // function fitnessTest(array) {
+// //    acumulator = 0
+// //    while (acumulator <= 20) {
+
+// //   }
+// //}
+// let resultString = ""
+// let acumulator = 0
+// let numOfMoves = 0
+// while (acumulator <= 19) {
+//    acumulator += chimpanzeeTwo.move();
+//    numOfMoves += 1
+//    resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
+//    console.log(resultString)
+//    }
+//    resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
+//    console.log(resultString)
+
+
+   let output = [];
+   let students = {
+      names: ["Gerard Darris", "Banana Cat", "Apple Dog", "Mango Zebra", "Kiwi Kiwi"],
+      scores: [100, 95, 74, 82, 91]
+   };
+
+for (let i = 0; i < students.names.length; i++) {
+   let output = "";
+
+   for (items in students) {
+      output += `${students[items][i]}: `;
+
+      console.log(output.slice(0, -2));
    }
-   resultString = `${chimpanzeeTwo.name} took ${numOfMoves} turns to take 20 steps.`
-   console.log(resultString)
-
+}

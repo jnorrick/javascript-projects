@@ -1,8 +1,9 @@
 // launchcode.test.js code:
 const launchcode = require('../index.js');
 
-describe("Testing launchcode", function(){
+describe("Testing launchcode", function() {
 
-  // Write your unit tests here!
-  
+    test("Launchcode should return an object", () => {
+      expect(launchcode).toBeInstanceOf(Object);
+    });
 });

@@ -1,10 +1,17 @@
 function gradeLabs(labs) {
   for (let i=0; i < labs.length; i++) {
     let lab = labs[i];
-    let result = lab.runLab(3);
-    console.log(`${lab.student} code worked: ${result === 27}`);
+    try {
+      let result = lab.runLab(3);
+      console.log(`${lab.student} code worked: ${result === 27}`);
+    }catch (error) {
+      if (studentLabs.runLab === undefined) {
+        console.error("This value is undefined.")
+      } 
+    }
   }
 }
+
 
 let studentLabs = [
   {
@@ -15,10 +22,10 @@ let studentLabs = [
   },
   {
     student: 'Erica',
-    runLab: function (num) {
-        return num * num;
+    // runLab: function (num) {
+    //     return num * num;
     }
-  }
+  // }
 ];
 
 gradeLabs(studentLabs);

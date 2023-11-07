@@ -4,9 +4,18 @@
     <title>Fetch Planets</title>
     <script>
         window.addEventListener("load", function(){
-            fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
-                response.json().then(function(json) {
+            fetch("https://handlers.education.launchcode.org/static/planets.json")
+            .then(function(response){
+                response.json()
+                .then(function(json) {
                 const destination = document.getElementById("destination");
+                let index = 0;
+                if (json[1].name == "Pern") {
+                    json[1].image = "https://www.datasciencecentral.com/wp-content/uploads/2022/01/9971938064.jpeg"
+                }
+                //iterate through json logging each object one at a time
+                //while iterating through, look for 'main brains' in the file (planet name?, index= 1?)
+                
                 destination.addEventListener("click", function(){
                     destination.innerHTML = `
                         <div>
